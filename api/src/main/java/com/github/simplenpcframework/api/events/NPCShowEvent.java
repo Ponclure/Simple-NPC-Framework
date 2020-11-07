@@ -12,7 +12,7 @@ import org.bukkit.event.HandlerList;
 import com.github.simplenpcframework.api.NPC;
 
 /**
- * @author Jitse Boonstra
+ * @author Ponclure
  */
 public class NPCShowEvent extends Event implements Cancellable {
 

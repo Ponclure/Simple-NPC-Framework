@@ -21,7 +21,7 @@ import java.util.Objects;
 import java.util.UUID;
 
 /**
- * @author Jitse Boonstra
+ * @author Ponclure
  */
 public class ChunkListener implements Listener {
 

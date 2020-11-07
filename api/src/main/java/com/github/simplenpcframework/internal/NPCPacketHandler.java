@@ -10,7 +10,7 @@ import com.github.simplenpcframework.api.state.NPCAnimation;
 import com.github.simplenpcframework.api.state.NPCSlot;
 
 /**
- * @author Jitse Boonstra
+ * @author Ponclure
  */
 interface NPCPacketHandler {
 

@@ -18,7 +18,7 @@ import com.github.simplenpcframework.internal.NPCBase;
 import com.github.simplenpcframework.internal.NPCManager;
 
 /**
- * @author Jitse Boonstra
+ * @author Ponclure
  */
 public class PlayerListener extends HandleMoveBase implements Listener {
 

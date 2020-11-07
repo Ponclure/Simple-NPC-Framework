@@ -8,7 +8,7 @@ package com.github.simplenpcframework;
  */
 public class SimpleNPCFrameworkOptions {
 
-	MovementHandling moveHandling;
+	public MovementHandling moveHandling;
 
 	/**
 	 * Creates the default options
@@ -43,7 +43,8 @@ public class SimpleNPCFrameworkOptions {
 	public static class MovementHandling {
 
 		final boolean usePme;
-		final long updateInterval;
+		
+		public final long updateInterval;
 
 		private MovementHandling(boolean usePme, long updateInterval) {
 			this.usePme = usePme;

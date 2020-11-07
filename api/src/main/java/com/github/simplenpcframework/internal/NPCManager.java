@@ -11,7 +11,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @author Jitse Boonstra
+ * @author Ponclure
  */
 public final class NPCManager {
 

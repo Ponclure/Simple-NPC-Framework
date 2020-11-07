@@ -21,7 +21,7 @@ import java.util.Set;
 import java.util.UUID;
 
 /**
- * @author Jitse Boonstra
+ * @author Ponclure
  */
 public class PacketListener {
 

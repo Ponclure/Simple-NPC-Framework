@@ -11,7 +11,7 @@ import org.bukkit.event.HandlerList;
 import com.github.simplenpcframework.api.NPC;
 
 /**
- * @author Jitse Boonstra
+ * @author Ponclure
  */
 public class NPCInteractEvent extends Event {
 

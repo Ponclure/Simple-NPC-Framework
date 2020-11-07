@@ -13,10 +13,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
-	<name>NPCLib</name>
-	<url>https://github.com/JitseB/NPCLib</url>
-	<description>Basic non-player character library for Minecraft.</description>
-
 	<modules>
 		<module>api</module>
 		<module>nms</module>
