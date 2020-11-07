@@ -6,9 +6,9 @@
     <packaging>jar</packaging>
 
     <parent>
-        <artifactId>npclib</artifactId>
-        <groupId>net.jitse</groupId>
-        <version>2.9-SNAPSHOT</version>
+        <artifactId>SimpleNPCFramework</artifactId>
+        <groupId>com.github.simplenpcframework</groupId>
+        <version>RELEASE-1.0.0</version>
     </parent>
 
     <artifactId>npclib-api</artifactId>
