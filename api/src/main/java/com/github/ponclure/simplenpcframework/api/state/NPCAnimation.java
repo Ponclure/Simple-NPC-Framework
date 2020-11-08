@@ -9,7 +9,6 @@ public enum NPCAnimation {
     MAGICAL_DAMAGE(5);
 
     private int id;
-    
     NPCAnimation(int id) {
         this.id = id;
     }

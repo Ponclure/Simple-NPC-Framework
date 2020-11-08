@@ -1,7 +1,3 @@
-/*
- * Copyright (c) 2018 Jitse Boonstra
- */
-
 package com.github.ponclure.simplenpcframework;
 
 import com.github.ponclure.simplenpcframework.listeners.ChunkListener;
