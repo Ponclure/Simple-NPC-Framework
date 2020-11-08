@@ -51,6 +51,7 @@ public class MineSkinFetcher {
 			} catch (IOException exception) {
 				Bukkit.getLogger().severe("Could not fetch skin! (Id: " + id + "). Message: " + exception.getMessage());
 				exception.printStackTrace();
+				callback.call(null);
 			}
 		});
 	}
@@ -61,6 +62,8 @@ public class MineSkinFetcher {
 			fetchSkinFromUuidAsync(player.getUniqueId(), username, callback);
 		} else {
 			Bukkit.getLogger().severe("Could not fetch skin! (Username: " + username + ").");
+			// let's ensure the callback stays async
+			EXECUTOR.execute(() -> callback.call(null));
 		}
 	}
 
@@ -94,6 +97,7 @@ public class MineSkinFetcher {
 			} catch (IOException exception) {
 				Bukkit.getLogger().severe("Could not fetch skin! (Username: " + username + ").");
 				exception.printStackTrace();
+				callback.call(null);
 			}
 		});
 	}
