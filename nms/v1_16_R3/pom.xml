@@ -8,7 +8,7 @@
 
 	<parent>
 		<artifactId>SimpleNPCFramework</artifactId>
-		<groupId>com.github.ponclure.simplenpcframework</groupId>
+		<groupId>com.github.ponclure</groupId>
 		<version>RELEASE-1.0.0</version>
 		<relativePath>../../pom.xml</relativePath>
 	</parent>
@@ -23,7 +23,7 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>com.github.ponclure.simplenpcframework</groupId>
+			<groupId>com.github.ponclure</groupId>
 			<artifactId>SimpleNPCFramework-API</artifactId>
 			<version>${project.parent.version}</version>
 			<scope>provided</scope>
