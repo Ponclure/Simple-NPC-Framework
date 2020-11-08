@@ -2,8 +2,8 @@ package com.github.ponclure.simplenpcframework.api.skin;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -21,6 +21,7 @@ import java.util.concurrent.Executors;
 public class MineSkinFetcher {
 
 	private static final String MINESKIN_API = "https://api.mineskin.org/get/id/";
+	private static final String MOJANG_SESSIONS = "https://sessionserver.mojang.com/session/minecraft/profile/{0}?unsigned=false";
 	private static final ExecutorService EXECUTOR = Executors.newSingleThreadExecutor();
 
 	public static void fetchSkinFromIdAsync(int id, Callback callback) {
@@ -53,16 +54,20 @@ public class MineSkinFetcher {
 			}
 		});
 	}
-	
-	public static void fetchSkinFromUUIDAsync(UUID uuid, Callback callback) {
-		fetchSkinFromUsernameAsync(Bukkit.getPlayer(uuid).getName(), callback);
-	}
 
 	public static void fetchSkinFromUsernameAsync(String username, Callback callback) {
+		Player player = Bukkit.getPlayer(username);
+		if (player != null) {
+			fetchSkinFromUuidAsync(player.getUniqueId(), username, callback);
+		} else {
+			Bukkit.getLogger().severe("Could not fetch skin! (Username: " + username + ").");
+		}
+	}
+
+	public static void fetchSkinFromUuidAsync(UUID uuid, String username, Callback callback) {
 		EXECUTOR.execute(() -> {
 			try {
-				String link = "https://sessionserver.mojang.com/session/minecraft/profile/"
-						+ Bukkit.getPlayer(username).getUniqueId() + "?unsigned=false";
+				String link = MOJANG_SESSIONS.replace("{0}", uuid.toString());
 				HttpURLConnection httpURLConnection = (HttpURLConnection) new URL(link).openConnection();
 				httpURLConnection.setRequestMethod("GET");
 				httpURLConnection.setDoOutput(true);
@@ -87,8 +92,7 @@ public class MineSkinFetcher {
 
 				callback.call(new Skin(value, signature));
 			} catch (IOException exception) {
-				Bukkit.getLogger().severe(
-						"Could not fetch skin! (Username: " + username + "). Message: " + exception.getMessage());
+				Bukkit.getLogger().severe("Could not fetch skin! (Username: " + username + ").");
 				exception.printStackTrace();
 			}
 		});
