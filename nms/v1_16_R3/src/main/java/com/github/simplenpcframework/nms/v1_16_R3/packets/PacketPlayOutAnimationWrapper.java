@@ -1,9 +1,9 @@
-package com.github.simplenpcframework.nms.v1_16_R1.packets;
+package com.github.simplenpcframework.nms.v1_16_R3.packets;
 
 import com.github.simplenpcframework.api.state.NPCAnimation;
 import com.github.simplenpcframework.utility.Reflection;
 
-import net.minecraft.server.v1_16_R1.PacketPlayOutAnimation;
+import net.minecraft.server.v1_16_R3.PacketPlayOutAnimation;
 
 public class PacketPlayOutAnimationWrapper {
 

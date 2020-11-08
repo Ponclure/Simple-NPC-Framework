@@ -1,9 +1,9 @@
-package com.github.simplenpcframework.nms.v1_16_R1.packets;
+package com.github.simplenpcframework.nms.v1_16_R3.packets;
 
-import net.minecraft.server.v1_16_R1.DataWatcher;
-import net.minecraft.server.v1_16_R1.DataWatcherObject;
-import net.minecraft.server.v1_16_R1.DataWatcherRegistry;
-import net.minecraft.server.v1_16_R1.PacketPlayOutEntityMetadata;
+import net.minecraft.server.v1_16_R3.DataWatcher;
+import net.minecraft.server.v1_16_R3.DataWatcherObject;
+import net.minecraft.server.v1_16_R3.DataWatcherRegistry;
+import net.minecraft.server.v1_16_R3.PacketPlayOutEntityMetadata;
 
 import java.util.Collection;
 

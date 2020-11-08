@@ -1,4 +1,4 @@
-package com.github.simplenpcframework.nms.v1_16_R1;
+package com.github.simplenpcframework.nms.v1_16_R3;
 
 import com.github.simplenpcframework.SimpleNPCFramework;
 import com.github.simplenpcframework.api.skin.Skin;
@@ -6,14 +6,14 @@ import com.github.simplenpcframework.api.state.NPCAnimation;
 import com.github.simplenpcframework.api.state.NPCSlot;
 import com.github.simplenpcframework.hologram.Hologram;
 import com.github.simplenpcframework.internal.NPCBase;
-import com.github.simplenpcframework.nms.v1_16_R1.packets.*;
+import com.github.simplenpcframework.nms.v1_16_R3.packets.*;
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
 import com.mojang.datafixers.util.Pair;
-import net.minecraft.server.v1_16_R1.*;
+import net.minecraft.server.v1_16_R3.*;
 import org.bukkit.Bukkit;
-import org.bukkit.craftbukkit.v1_16_R1.entity.CraftPlayer;
-import org.bukkit.craftbukkit.v1_16_R1.inventory.CraftItemStack;
+import org.bukkit.craftbukkit.v1_16_R3.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_16_R3.inventory.CraftItemStack;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
@@ -23,7 +23,7 @@ import java.util.List;
 /**
  * @author Jitse Boonstra
  */
-public class NPC_v1_16_R1 extends NPCBase {
+public class NPC_v1_16_R3 extends NPCBase {
 
     private PacketPlayOutNamedEntitySpawn packetPlayOutNamedEntitySpawn;
     private PacketPlayOutScoreboardTeam packetPlayOutScoreboardTeamRegister;
@@ -32,7 +32,7 @@ public class NPC_v1_16_R1 extends NPCBase {
     private PacketPlayOutEntityDestroy packetPlayOutEntityDestroy;
     private PacketPlayOutAnimation packetPlayOutAnimation;
 
-    public NPC_v1_16_R1(SimpleNPCFramework instance, List<String> lines) {
+    public NPC_v1_16_R3(SimpleNPCFramework instance, List<String> lines) {
         super(instance, lines);
     }
 
@@ -40,7 +40,7 @@ public class NPC_v1_16_R1 extends NPCBase {
     public Hologram getPlayerHologram(Player player) {
         Hologram holo = super.getPlayerHologram(player);
         if (holo == null) {
-            holo = new Hologram(com.github.simplenpcframework.internal.MinecraftVersion.V1_16_R1, location.clone().add(0, 0.5, 0), getPlayerLines(player));
+            holo = new Hologram(com.github.simplenpcframework.internal.MinecraftVersion.v1_16_R3, location.clone().add(0, 0.5, 0), getPlayerLines(player));
         }
         super.textDisplayHolograms.put(player.getUniqueId(), holo);
         return holo;
@@ -119,7 +119,7 @@ public class NPC_v1_16_R1 extends NPCBase {
         EnumItemSlot nmsSlot = slot.getNmsEnum(EnumItemSlot.class);
         ItemStack item = getItem(slot);
 
-        Pair<EnumItemSlot, net.minecraft.server.v1_16_R1.ItemStack> pair = new Pair<>(nmsSlot, CraftItemStack.asNMSCopy(item));
+        Pair<EnumItemSlot, net.minecraft.server.v1_16_R3.ItemStack> pair = new Pair<>(nmsSlot, CraftItemStack.asNMSCopy(item));
         PacketPlayOutEntityEquipment packet = new PacketPlayOutEntityEquipment(entityId, Collections.singletonList(pair));
         playerConnection.sendPacket(packet);
     }

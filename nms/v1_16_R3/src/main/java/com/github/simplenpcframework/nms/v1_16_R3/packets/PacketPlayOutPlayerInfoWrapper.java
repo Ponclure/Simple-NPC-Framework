@@ -2,13 +2,13 @@
  * Copyright (c) 2018 Jitse Boonstra
  */
 
-package com.github.simplenpcframework.nms.v1_16_R1.packets;
+package com.github.simplenpcframework.nms.v1_16_R3.packets;
 
 import com.github.simplenpcframework.utility.Reflection;
 import com.mojang.authlib.GameProfile;
-import net.minecraft.server.v1_16_R1.EnumGamemode;
-import net.minecraft.server.v1_16_R1.IChatBaseComponent;
-import net.minecraft.server.v1_16_R1.PacketPlayOutPlayerInfo;
+import net.minecraft.server.v1_16_R3.EnumGamemode;
+import net.minecraft.server.v1_16_R3.IChatBaseComponent;
+import net.minecraft.server.v1_16_R3.PacketPlayOutPlayerInfo;
 
 import java.util.Collections;
 import java.util.List;

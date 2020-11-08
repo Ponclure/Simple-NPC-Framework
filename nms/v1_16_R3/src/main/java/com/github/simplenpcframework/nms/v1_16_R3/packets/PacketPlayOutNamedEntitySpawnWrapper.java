@@ -2,9 +2,9 @@
  * Copyright (c) 2018 Jitse Boonstra
  */
 
-package com.github.simplenpcframework.nms.v1_16_R1.packets;
+package com.github.simplenpcframework.nms.v1_16_R3.packets;
 
-import net.minecraft.server.v1_16_R1.PacketPlayOutNamedEntitySpawn;
+import net.minecraft.server.v1_16_R3.PacketPlayOutNamedEntitySpawn;
 import org.bukkit.Location;
 
 import com.github.simplenpcframework.utility.Reflection;

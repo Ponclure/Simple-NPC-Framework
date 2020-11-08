@@ -2,11 +2,11 @@
  * Copyright (c) 2018 Jitse Boonstra
  */
 
-package com.github.simplenpcframework.nms.v1_16_R1.packets;
+package com.github.simplenpcframework.nms.v1_16_R3.packets;
 
-import net.minecraft.server.v1_16_R1.ChatComponentText;
-import net.minecraft.server.v1_16_R1.IChatBaseComponent;
-import net.minecraft.server.v1_16_R1.PacketPlayOutScoreboardTeam;
+import net.minecraft.server.v1_16_R3.ChatComponentText;
+import net.minecraft.server.v1_16_R3.IChatBaseComponent;
+import net.minecraft.server.v1_16_R3.PacketPlayOutScoreboardTeam;
 
 import java.util.Collection;
 import java.util.Collections;
