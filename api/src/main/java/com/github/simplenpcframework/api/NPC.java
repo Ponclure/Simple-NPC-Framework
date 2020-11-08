@@ -24,7 +24,7 @@ public interface NPC {
      * @param player
      * @return unique hologram for that user
      */
-    Hologram getPlayerHologram(Player player);
+    public Hologram getPlayerHologram(Player player);
 
     /**
      *
@@ -32,7 +32,7 @@ public interface NPC {
      * @return object instance
      * @author Gatt
      */
-    NPC removePlayerLines(Player targetPlayer);
+    public NPC removePlayerLines(Player targetPlayer);
     /**
      *
      * @param targetPlayer The target player
@@ -40,7 +40,7 @@ public interface NPC {
      * @return object instance
      * @author Gatt
      */
-    NPC removePlayerLines(Player targetPlayer, boolean update);
+    public NPC removePlayerLines(Player targetPlayer, boolean update);
 
     /**
      *
@@ -49,7 +49,7 @@ public interface NPC {
      * @return object instance
      * @author Gatt
      */
-    NPC setPlayerLines(List<String> uniqueLines, Player targetPlayer);
+    public NPC setPlayerLines(List<String> uniqueLines, Player targetPlayer);
 
     /**
      * @param uniqueLines  The text that the targetPlayer will see
@@ -58,14 +58,14 @@ public interface NPC {
      * @return object instance
      * @author Gatt
      */
-    NPC setPlayerLines(List<String> uniqueLines, Player targetPlayer, boolean update);
+    public NPC setPlayerLines(List<String> uniqueLines, Player targetPlayer, boolean update);
 
     /**
      * @param targetPlayer The target player
      * @return the lines that the targetPlayer will see, if null; default lines.
      * @author Gatt
      */
-    List<String> getPlayerLines(Player targetPlayer);
+    public List<String> getPlayerLines(Player targetPlayer);
 
     /**
      * Set the NPC's location.
@@ -74,7 +74,7 @@ public interface NPC {
      * @param location The spawn location for the NPC.
      * @return object instance.
      */
-    NPC setLocation(Location location);
+    public NPC setLocation(Location location);
 
     /**
      * Set the NPC's skin.
@@ -83,42 +83,42 @@ public interface NPC {
      * @param skin The skin(data) you'd like to apply.
      * @return object instance.
      */
-    NPC setSkin(Skin skin);
+    public NPC setSkin(Skin skin);
 
     /**
      * Get the location of the NPC.
      *
      * @return The location of the NPC.
      */
-    Location getLocation();
+    public Location getLocation();
 
     /**
      * Get the world the NPC is located in.
      *
      * @return The world the NPC is located in.
      */
-    World getWorld();
+    public World getWorld();
 
     /**
      * Create all necessary packets for the NPC so it can be shown to players.
      *
      * @return object instance.
      */
-    NPC create();
+    public NPC create();
 
     /**
      * Check whether the NPCs packets have already been generated.
      *
      * @return Whether NPC#create has been called yet.
      */
-    boolean isCreated();
+    public boolean isCreated();
 
     /**
      * Get the ID of the NPC.
      *
      * @return the ID of the NPC.
      */
-    String getId();
+    public String getId();
 
     /**
      * Test if a player can see the NPC.
@@ -127,7 +127,7 @@ public interface NPC {
      * @param player The player you'd like to check.
      * @return Value on whether the player can see the NPC.
      */
-    boolean isShown(Player player);
+    public boolean isShown(Player player);
 
     /**
      * Show the NPC to a player.
@@ -135,7 +135,7 @@ public interface NPC {
      *
      * @param player the player to show the NPC to.
      */
-    void show(Player player);
+    public void show(Player player);
 
     /**
      * Hide the NPC from a player.
@@ -144,13 +144,13 @@ public interface NPC {
      *
      * @param player The player to hide the NPC from.
      */
-    void hide(Player player);
+    public void hide(Player player);
 
     /**
      * Destroy the NPC, i.e. remove it from the registry.
      * Requires {@link NPC#create} to be used first.
      */
-    void destroy();
+    public void destroy();
 
     /**
      * Toggle a state of the NPC.
@@ -158,14 +158,14 @@ public interface NPC {
      * @param state The state to be toggled.
      * @return Object instance.
      */
-    NPC toggleState(NPCState state);
+    public NPC toggleState(NPCState state);
 
     /**
      * Plays an animation as the the NPC.
      *
      * @param animation The animation to play.
      */
-    void playAnimation(NPCAnimation animation);
+    public void playAnimation(NPCAnimation animation);
 
     /**
      * Get state of NPC.
@@ -173,7 +173,7 @@ public interface NPC {
      * @param state The state requested.
      * @return boolean on/off status.
      */
-    boolean getState(NPCState state);
+    public boolean getState(NPCState state);
 
     /**
      * Change the item in the inventory of the NPC.
@@ -182,16 +182,16 @@ public interface NPC {
      * @param item The item to set.
      * @return Object instance.
      */
-    NPC setItem(NPCSlot slot, ItemStack item);
+    public NPC setItem(NPCSlot slot, ItemStack item);
 
-    NPC setText(List<String> text);
+    public NPC setText(List<String> text);
 
     /**
      * Get the text of an NPC
      *
      * @return List<String> text
      */
-    List<String> getText();
+    public List<String> getText();
 
     /**
      * Get a NPC's item.
@@ -199,19 +199,19 @@ public interface NPC {
      * @param slot The slot the item is in.
      * @return ItemStack item.
      */
-    ItemStack getItem(NPCSlot slot);
+    public ItemStack getItem(NPCSlot slot);
 
     /**
      * Update the skin for every play that can see the NPC.
      *
      * @param skin The new skin for the NPC.
      */
-    void updateSkin(Skin skin);
+    public void updateSkin(Skin skin);
 
     /**
      * Get the UUID of the NPC.
      *
      * @return The UUID of the NPC.
      */
-    UUID getUniqueId();
+    public UUID getUniqueId();
 }

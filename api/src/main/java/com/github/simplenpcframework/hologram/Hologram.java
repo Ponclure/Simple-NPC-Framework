@@ -113,16 +113,7 @@ public class Hologram {
 		Reflection.MethodInvoker customNameVisibilityMethod = Reflection.getMethod(ENTITY_CLASS, "setCustomNameVisible",
 				boolean.class);
 
-		Location location = start.clone().add(0, (DELTA * text.size()) + (SET_MARKER_METHOD != null ? 1f : 0f), 0); // markers
-																													// drop
-																													// the
-																													// armor
-																													// stand's
-																													// nametag
-																													// by
-																													// around
-																													// 1
-																													// block
+		Location location = start.clone().add(0, (DELTA * text.size()) + (SET_MARKER_METHOD != null ? 1f : 0f), 0);
 		Class<?> worldClass = worldServer.getClass().getSuperclass();
 
 		if (start.getWorld().getEnvironment() != World.Environment.NORMAL) {
