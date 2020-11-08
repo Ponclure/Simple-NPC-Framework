@@ -10,6 +10,7 @@
 		<artifactId>SimpleNPCFramework</artifactId>
 		<groupId>com.github.simplenpcframework</groupId>
 		<version>RELEASE-1.0.0</version>
+		<relativePath>../../</relativePath>
 	</parent>
 
 	<artifactId>SimpleNPCFramework-NMS-v1_16_R1</artifactId>
