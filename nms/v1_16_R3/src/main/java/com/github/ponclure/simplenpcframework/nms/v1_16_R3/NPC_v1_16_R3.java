@@ -13,7 +13,6 @@ import com.github.ponclure.simplenpcframework.nms.v1_16_R3.packets.PacketPlayOut
 import com.github.ponclure.simplenpcframework.nms.v1_16_R3.packets.PacketPlayOutNamedEntitySpawnWrapper;
 import com.github.ponclure.simplenpcframework.nms.v1_16_R3.packets.PacketPlayOutPlayerInfoWrapper;
 import com.github.ponclure.simplenpcframework.nms.v1_16_R3.packets.PacketPlayOutScoreboardTeamWrapper;
-import com.github.simplenpcframework.nms.v1_16_R3.packets.*;
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
 import com.mojang.datafixers.util.Pair;

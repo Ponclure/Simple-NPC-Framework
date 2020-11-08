@@ -7,7 +7,7 @@
 
     <parent>
         <artifactId>SimpleNPCFramework</artifactId>
-        <groupId>com.github.simplenpcframework</groupId>
+        <groupId>com.github.ponclure.simplenpcframework</groupId>
         <version>RELEASE-1.0.0</version>
     </parent>
 

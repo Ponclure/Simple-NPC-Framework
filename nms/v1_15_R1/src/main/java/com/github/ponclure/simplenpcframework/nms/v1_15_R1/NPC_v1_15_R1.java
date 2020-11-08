@@ -13,7 +13,6 @@ import com.github.ponclure.simplenpcframework.api.state.NPCAnimation;
 import com.github.ponclure.simplenpcframework.api.state.NPCSlot;
 import com.github.ponclure.simplenpcframework.hologram.Hologram;
 import com.github.ponclure.simplenpcframework.internal.NPCBase;
-import com.github.simplenpcframework.nms.v1_15_R1.packets.*;
 import com.mojang.authlib.GameProfile;
 import com.mojang.authlib.properties.Property;
 import net.minecraft.server.v1_15_R1.*;
