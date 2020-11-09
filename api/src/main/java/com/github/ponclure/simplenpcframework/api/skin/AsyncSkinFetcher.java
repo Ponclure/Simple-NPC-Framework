@@ -47,7 +47,7 @@ public class AsyncSkinFetcher {
 		EXECUTOR.execute(() -> {
 			try {
 				String request = getRequest(MINESKIN_API + id);
-				JsonObject jsonObject = (JsonObject) new JsonParser().parse(request);
+				JsonObject jsonObject = new JsonParser().parse(request).getAsJsonObject();
 				JsonObject textures = jsonObject.get("data").getAsJsonObject().get("texture").getAsJsonObject();
 				String value = textures.get("value").getAsString();
 				String signature = textures.get("signature").getAsString();
@@ -81,8 +81,8 @@ public class AsyncSkinFetcher {
 			try {
 				String link = MOJANG_SESSIONS.replace("{0}", uuid.toString());
 				String request = getRequest(link);
-				JsonObject json = (JsonObject) new JsonParser().parse(request);
-				JsonObject properties = json.get("properties").getAsJsonObject();
+				JsonObject json = new JsonParser().parse(request).getAsJsonObject();
+				JsonObject properties = json.get("properties").getAsJsonArray().get(0).getAsJsonObject();
 				String value = properties.get("value").getAsString();
 				String signature = properties.get("signature").getAsString();
 				callback.call(new Skin(value, signature));

@@ -24,13 +24,11 @@ public enum MinecraftVersion {
 		return ordinal;
 	}
 
-    public boolean isAboveOrEqual(MinecraftVersion compare) {
-        return getOrdinal() >= compare.getOrdinal() && isSupported(compare);
+    public boolean isAboveOrEqual(MinecraftVersion other) {
+        return getOrdinal() >= other.getOrdinal() && isSupported(this);
     }
     
     public boolean isSupported(MinecraftVersion version) {
     	return version.getOrdinal() >= 10;
     }
-
-
 }
