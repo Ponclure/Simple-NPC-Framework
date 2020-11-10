@@ -59,5 +59,7 @@ It has a `MineSkin` feature where it can accept an integer for its arguments lik
 
 In addition from the skins and methods of NPC's, there are also events your plugin can listen to as well. These events include a `NPCShowEvent`, `NPCHideEvent`, and `NPCInteractEvent`. 
 
+As for examples, you can take a look at this class I written [here](https://github.com/Ponclure/Simple-NPC-Framework/blob/master/api/src/main/java/examples/NPCUsageExample.java) which stores the person who created NPC's and sends them as a message to the player if they are interacted.
+
 ## Conclusion
 And that's pretty much it. We will be adding more features as we go on, but check out our organization's website located at [https://ponclure.github.io](https://ponclure.github.io), which contains all of our projects and source code made by collaborative developers. I hope this API is useful!
