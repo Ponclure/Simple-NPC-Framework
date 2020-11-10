@@ -56,3 +56,6 @@ AsyncSkinFetcher.fetchSkinFromUUIDAsync(UUID uuid, skin -> {
 })
 ```
 It has a `MineSkin` feature where it can accept an integer for its arguments like ([https://mineskin.org/725954](https://mineskin.org/725954) has ID 725954), or you can just pass in a UUID and it will retrieve the skin using the identifier. It should be noted that the method `fetchSkinFromUsernameAsync` is deprecated for a reason, as the player name can change many times. Thus, the UUID is the ideal option you should use.
+
+## Conclusion
+And that's pretty much it. We will be adding more features as we go on, but check out our organization's website located at [https://ponclure.github.io](https://ponclure.github.io), which contains all of our projects and source code made by collaborative developers. I hope this API is useful!
