@@ -13,7 +13,7 @@ To start off, define an instance of this library using the constructor which acc
 Do not create multiple instances of `SimpleNPCFramework` in many classes! Instead use dependency injection or create a getter method in your main plugin class to reference the same instance of the library.
 
 In order to create your first NPC, we will use the `SimpleNPCFramework#createNPC()` method, which can accept either a `List<String>` of lines which would be a hologram on top of the NPC, or nothing if you want a plain NPC. As an example:
-```
+```java
 // NPC with no Hologram
 NPC normalNPC = framework.createNPC();
 
@@ -33,7 +33,7 @@ The other methods that can be used to customize your NPC can be found [here](htt
 | `NPC#getID()` | Returns the assigned ID for the NPC
 
 As for a code example:
-```
+```java
 NPC npc = framework.createNPC(Arrays.asList("Hello!")); // Initialize NPC
 npc.setLocation(new Location(0, 0, 0)); // Set Location to (0, 0, 0)
 npc.show(Bukkit.getPlayer("PulseBeat_02")); // Set Visible to Player
@@ -44,7 +44,7 @@ System.out.println(npc.getID()); // Print out the ID asociated with the NPC
 In order to add skins for your NPC, we have added a `Skin` class which you can use `NPC#setSkin(Skin skin)` for. `Skin` takes in two parameters in the constructor, a `String` value and a `String` signature for the skin. More information about what these two values represent can be found [here](https://wiki.vg/Mojang_API#UUID_-.3E_Profile_.2B_Skin.2FCape). 
 
 For your convienance, we have added a class called `AsyncSkinFetcher`. 
-```
+```java
 AsyncSkinFetcher.fetchSkinFromIdAsync(int id, skin -> {
     // Create your NPC.
 })
