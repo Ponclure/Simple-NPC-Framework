@@ -30,7 +30,7 @@ The other methods that can be used to customize your NPC can be found [here](htt
 | `NPC#destroy()` | Destroys the NPC and removes it from the internal registry.
 | `NPC#show(Player player)` | Sets NPC visible to specific Player
 | `NPC#hide(Player player)` | Sets NPC not visible to Specific Player
-| `NPC#getID()` | Returns the assigned ID for the NPC
+| `NPC#getId()` | Returns the assigned ID for the NPC
 
 As for a code example:
 ```java
@@ -38,7 +38,7 @@ NPC npc = framework.createNPC(Arrays.asList("Hello!")); // Initialize NPC
 npc.setLocation(new Location(0, 0, 0)); // Set Location to (0, 0, 0)
 npc.show(Bukkit.getPlayer("PulseBeat_02")); // Set Visible to Player
 npc.create(); // Create the NPC
-System.out.println(npc.getID()); // Print out the ID asociated with the NPC
+System.out.println(npc.getId()); // Print out the ID asociated with the NPC
 ```
 
 In order to add skins for your NPC, we have added a `Skin` class which you can use `NPC#setSkin(Skin skin)` for. `Skin` takes in two parameters in the constructor, a `String` value and a `String` signature for the skin. More information about what these two values represent can be found [here](https://wiki.vg/Mojang_API#UUID_-.3E_Profile_.2B_Skin.2FCape). 
