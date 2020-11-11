@@ -6,6 +6,8 @@ Tired of coding NPC's? Annoyed to find that there are little to no outdated tuto
 Simple NPC Framework is a fork of the original known lightweight framework `NPCLib`, a very useful API. After the developer decided to discontinue development for the API, we have decided to take over and continue to add support for the newer Minecraft versions that will be coming out. We will not support older versions, as `NPCLib` can be used for those versions and we want to respect the authors.
 
 ## Developer API
+If you want to use this API, we recommend you to `clone` the repository and run `mvn install` to install the repository to your local dependencies.
+
 To start off, define an instance of this library using the constructor which accepts `Plugin` as its parameters like so:
 
 `SimpleNPCFramework framework = new SimpleNPCFramework(plugin);` 
