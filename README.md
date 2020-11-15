@@ -1,4 +1,10 @@
 # Simple NPC Framework [1.15 - 1.16] [Lightweight NPC Framework]
+[![Build Status](https://travis-ci.org/Ponclure/Simple-NPC-Framework.svg?branch=master)](https://travis-ci.org/Ponclure/Simple-NPC-Framework)
+[![Issues](https://img.shields.io/github/issues/Ponclure/Simple-NPC-Framework)](https://github.com/Ponclure/Simple-NPC-Framework/issues)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Discord](https://img.shields.io/discord/775376080546693120.svg?label=discord&logo=discord)](https://discord.gg/d7qfcUwhex)
+[![Repository Size](https://img.shields.io/github/languages/code-size/Ponclure/Simple-NPC-Framework)](https://github.com/Ponclure/Simple-NPC-Framework)
+[![Lines of Code](https://img.shields.io/tokei/lines/github/Ponclure/Simple-NPC-Framework)](https://github.com/Ponclure/Simple-NPC-Framework)
 
 ## Introduction
 Tired of coding NPC's? Annoyed to find that there are little to no outdated tutorials that you find over the internet on how you code these fake players? Need something lightweight? Well then Simple NPC Framework is the framework you should use. Although the Citizens API is very useful, I find it very heavy and bulky in terms of size, so we have decided to create a more lightweight framework for developers to use. 
