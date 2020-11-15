@@ -6,42 +6,62 @@
     <packaging>jar</packaging>
 
     <parent>
-        <artifactId>SimpleNPCFramework</artifactId>
         <groupId>com.github.ponclure</groupId>
-        <version>RELEASE-1.0.0</version>
+        <artifactId>SimpleNPCFramework</artifactId>
+        <version>2.11-SNAPSHOT</version>
     </parent>
 
     <artifactId>SimpleNPCFramework-API</artifactId>
 
-    <repositories>
-        <repository>
-            <id>spigot-repo</id>
-            <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-        </repository>
-        <repository>
-            <id>minecraft-repo</id>
-            <url>https://libraries.minecraft.net</url>
-        </repository>
-    </repositories>
+    <build>
+        <defaultGoal>clean install</defaultGoal>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <createDependencyReducedPom>false</createDependencyReducedPom>
+                            <filters>
+                                <filter>
+                                    <artifact>*:*</artifact>
+                                    <excludes>
+                                        <exclude>META-INF/*.*</exclude>
+                                        <exclude>examples/**</exclude>
+                                    </excludes>
+                                </filter>
+                            </filters>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 
     <dependencies>
         <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.16.4-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
+            <groupId>com.github.ponclure</groupId>
+            <artifactId>SimpleNPCFramework-Internal</artifactId>
+            <version>2.11-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>com.mojang</groupId>
-            <artifactId>authlib</artifactId>
-            <version>1.5.21</version>
-            <scope>provided</scope>
+            <groupId>com.github.ponclure</groupId>
+            <artifactId>SimpleNPCFramework-NMS-v1_15_R1</artifactId>
+            <version>2.11-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
-            <version>4.1.42.Final</version>
-            <scope>provided</scope>
+            <groupId>com.github.ponclure</groupId>
+            <artifactId>SimpleNPCFramework-NMS-v1_16_R3</artifactId>
+            <version>2.11-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 </project>

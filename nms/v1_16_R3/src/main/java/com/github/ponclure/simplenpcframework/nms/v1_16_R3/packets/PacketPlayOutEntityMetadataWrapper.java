@@ -1,5 +1,6 @@
 package com.github.ponclure.simplenpcframework.nms.v1_16_R3.packets;
 
+import com.github.ponclure.simplenpcframework.api.state.NPCState;
 import net.minecraft.server.v1_16_R3.DataWatcher;
 import net.minecraft.server.v1_16_R3.DataWatcherObject;
 import net.minecraft.server.v1_16_R3.DataWatcherRegistry;
@@ -7,17 +8,15 @@ import net.minecraft.server.v1_16_R3.PacketPlayOutEntityMetadata;
 
 import java.util.Collection;
 
-import com.github.ponclure.simplenpcframework.api.state.NPCState;
-
 public class PacketPlayOutEntityMetadataWrapper {
 
-    public PacketPlayOutEntityMetadata create(Collection<NPCState> activateStates, int entityId) {
-        DataWatcher dataWatcher = new DataWatcher(null);
-        dataWatcher.register(new DataWatcherObject<>(16, DataWatcherRegistry.a), (byte) 127);
+	public PacketPlayOutEntityMetadata create(final Collection<NPCState> activateStates, final int entityId) {
+		final DataWatcher dataWatcher = new DataWatcher(null);
+		dataWatcher.register(new DataWatcherObject<>(16, DataWatcherRegistry.a), (byte) 127);
 
-        byte masked = NPCState.getMasked(activateStates);
-        // TODO: Find out why NPCState#CROUCHED doesn't work.
-        dataWatcher.register(new DataWatcherObject<>(0, DataWatcherRegistry.a), masked);
+		final byte masked = NPCState.getMasked(activateStates);
+		// TODO: Find out why NPCState#CROUCHED doesn't work.
+		dataWatcher.register(new DataWatcherObject<>(0, DataWatcherRegistry.a), masked);
 
 //        for (Player online : Bukkit.getOnlinePlayers()) {
 //            DataWatcher watcher = ((CraftPlayer) online).getHandle().getDataWatcher();
@@ -35,6 +34,6 @@ public class PacketPlayOutEntityMetadataWrapper {
 //            }
 //        }
 
-        return new PacketPlayOutEntityMetadata(entityId, dataWatcher, true);
-    }
+		return new PacketPlayOutEntityMetadata(entityId, dataWatcher, true);
+	}
 }
