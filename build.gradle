@@ -1,4 +1,4 @@
-defaultTasks 'clean', 'build', 'SimpleNPCFramework-API:publishToMavenLocal'
+defaultTasks 'clean', 'build', 'publishToMavenLocal'
 
 allprojects {
     group = 'com.github.ponclure'
