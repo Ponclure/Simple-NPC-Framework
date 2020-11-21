@@ -17,3 +17,8 @@ log
 target
 dependency-reduced-pom.xml
 jars
+
+# gradle
+build
+.gradle
+gradle/wrapper/gradle-wrapper.jar
