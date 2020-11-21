@@ -13,5 +13,6 @@ jobs:
       - run: ls ~/.m2/repository/org/spigotmc/spigot/1.16.4-R0.1-SNAPSHOT >> /dev/null 2>&1 || java -jar BuildTools.jar --rev 1.16.4 >> /dev/null 2>&1
       - run: chmod +x gradlew
       - run: gradle wrapper
+      - run: ./gradlew
       - store_artifacts:
           path: target/Simple-NPC-Framework-2.11-SNAPSHOT-jar-with-dependencies.jar
