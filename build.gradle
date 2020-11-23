@@ -42,4 +42,9 @@ subprojects {
     tasks.withType(JavaCompile) {
         options.encoding = 'UTF-8'
     }
+
+    jar {
+        archivesBaseName = 'SimpleNPCFramework-LATEST'
+    }
+
 }
