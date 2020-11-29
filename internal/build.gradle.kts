@@ -1,3 +1,9 @@
+sourceSets {
+    main {
+        java.exclude("**/examples/**")
+    }
+}
+
 dependencies {
     compileOnly("org.spigotmc:spigot-api:1.16.4-R0.1-SNAPSHOT")
     compileOnly("com.mojang:authlib:1.5.25")

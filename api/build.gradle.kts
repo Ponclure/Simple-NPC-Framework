@@ -6,8 +6,6 @@ plugins {
 
 tasks.named("shadowJar", ShadowJar::class) {
     archiveFileName.set("${project.name}-${project.version}.jar")
-
-    exclude("examples/*.*")
 }
 
 dependencies {

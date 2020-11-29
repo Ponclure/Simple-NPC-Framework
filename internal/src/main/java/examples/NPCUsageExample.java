@@ -84,9 +84,11 @@ public class NPCUsageExample implements Listener {
 		if (!player.isOp()) {
 			return;
 		}
+
 		if (event.getClickedBlock().getType() != Material.DIAMOND_BLOCK) {
 			return;
 		}
+
 		setNPCAtPlayer(player);
 	}
 
@@ -101,8 +103,7 @@ public class NPCUsageExample implements Listener {
 		if (!placed.containsKey(clicked.getId())) {
 			return;
 		}
+
 		event.getWhoClicked().sendMessage(Bukkit.getPlayer(placed.get(clicked.getId())).getName() + ChatColor.GOLD + " created this NPC!");
-
 	}
-
 }
