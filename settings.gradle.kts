@@ -1,0 +1,11 @@
+rootProject.name = "SimpleNPCFramework"
+include(":SimpleNPCFramework-Internal")
+include(":SimpleNPCFramework-NMS:SimpleNPCFramework-NMS-v1_15_R1")
+include(":SimpleNPCFramework-NMS:SimpleNPCFramework-NMS-v1_16_R3")
+include(":SimpleNPCFramework-NMS")
+include(":SimpleNPCFramework-API")
+project(":SimpleNPCFramework-Internal").projectDir = file("internal")
+project(":SimpleNPCFramework-NMS:SimpleNPCFramework-NMS-v1_15_R1").projectDir = file("nms/v1_15_R1")
+project(":SimpleNPCFramework-NMS:SimpleNPCFramework-NMS-v1_16_R3").projectDir = file("nms/v1_16_R3")
+project(":SimpleNPCFramework-NMS").projectDir = file("nms")
+project(":SimpleNPCFramework-API").projectDir = file("api")
