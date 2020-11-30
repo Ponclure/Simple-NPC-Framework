@@ -58,7 +58,7 @@ AsyncSkinFetcher.fetchSkinFromIdAsync(int id, skin -> {
 ```
 OR
 ```
-AsyncSkinFetcher.fetchSkinFromUUIDAsync(UUID uuid, skin -> {
+AsyncSkinFetcher.fetchSkinFromUuidAsync(UUID uuid, skin -> {
     // Create your NPC.
 })
 ```
