@@ -14,6 +14,8 @@ Simple NPC Framework is a fork of the original known lightweight framework `NPCL
 ## Developer API
 If you want to use this API, we recommend you to `clone` the repository and run `./gradlew build SimpleNPCFramework-API:publishToMavenLocal` to install the repository to your local dependencies.
 
+**The library uses internal server classes directly, and to compile it you need to run BuildTools for 1.15.2 and 1.16.4 (not .5) so they are installed in your local repository**
+
 To start off, define an instance of this library using the constructor which accepts `Plugin` as its parameters like so:
 
 `SimpleNPCFramework framework = new SimpleNPCFramework(plugin);`
